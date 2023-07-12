@@ -1,0 +1,132 @@
+@use './reset' as *;
+@use './colors' as *;
+
+body {
+	font-family: 'Hanken Grotesk', sans-serif;
+}
+
+.container {
+	width: 100vw;
+	height: 100vh;
+	text-align: center;
+	background-color: $White;
+	.score {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		background: linear-gradient($Lightslateblue, $Lightroyalblue);
+		// background: linear-gradient(blue, red);
+		height: 40%;
+		border-radius: 0 0 20px 20px;
+		font-size: 1.4rem;
+		padding: 1em 4em;
+
+		&__text {
+			color: $Lightlavender;
+		}
+		&__numbers {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			border-radius: 50%;
+			background: linear-gradient($Violetblue, $Persianblue);
+			width: 100px;
+			height: 100px;
+			margin: 1em 0;
+			// box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+
+			&-result {
+				font-size: 4rem;
+				font-weight: 700;
+				color: $White;
+			}
+			&-of {
+				font-size: 1.1rem;
+				color: $Lightslateblue;
+			}
+		}
+		&__review {
+			&-title {
+				color: $White;
+				font-size: 1.6rem;
+			}
+			&-text {
+				margin-top: 0.5em;
+				font-size: 1.2rem;
+				color: $Lightlavender;
+				width: 200px;
+			}
+		}
+	}
+	.summary {
+		text-align: start;
+		padding: 2em;
+
+		&__title {
+			color: $Darkgrayblue;
+		}
+		.same {
+			display: flex;
+			justify-content: space-between;
+			padding: 1em;
+			margin: 1em 0;
+			border-radius: 5px;
+			font-size: 1.3rem;
+			position: relative;
+			span {
+				color: $Lightlavender;
+			}
+		}
+		.opt-score {
+			font-weight: 800;
+		}
+		.name {
+			margin-left: 30px;
+		}
+		img {
+			position: absolute;
+			height: 35%;
+		}
+		&__option1 {
+			background-color: $Lightred;
+			&-name {
+				color: $Lightred2;
+			}
+			// &-score {
+
+			// }
+		}
+		&__option2 {
+			background-color: $Orangeyyellow;
+
+			&-name {
+				color: $Orangeyyellow2;
+			}
+		}
+		&__option3 {
+			background-color: $Greenteal;
+			&-name {
+				color: $Greenteal2;
+			}
+		}
+		&__option4 {
+			background-color: $Cobaltblue;
+			&-name {
+				color: $Cobaltblue2;
+			}
+		}
+		&__button {
+			width: 100%;
+			background-color: $Darkgrayblue;
+			color: $White;
+			padding: 0.9em;
+			border-radius: 20px;
+			cursor: pointer;
+			font-weight: 700;
+			transition: color 0.3s;
+		}
+		&__button:hover {
+			color: $Lightlavender;
+		}
+	}
+}
