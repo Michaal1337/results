@@ -17,6 +17,7 @@ body {
 
 body {
   font-family: "Hanken Grotesk", sans-serif;
+  background-color: white;
 }
 
 .container {
@@ -28,12 +29,12 @@ body {
 .container .score {
   display: flex;
   flex-direction: column;
+  justify-content: space-around;
   align-items: center;
   background: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
   height: 40%;
   border-radius: 0 0 20px 20px;
-  font-size: 1.4rem;
-  padding: 1em 4em;
+  font-size: 2.3rem;
 }
 .container .score__text {
   color: hsl(241, 100%, 89%);
@@ -46,26 +47,25 @@ body {
   background: linear-gradient(hsl(256, 72%, 46%), hsla(241, 72%, 46%, 0));
   width: 100px;
   height: 100px;
-  margin: 1em 0;
 }
 .container .score__numbers-result {
-  font-size: 4rem;
+  font-size: 4.8rem;
   font-weight: 700;
   color: hsl(0, 0%, 100%);
 }
 .container .score__numbers-of {
-  font-size: 1.1rem;
+  font-size: 1.6rem;
   color: hsl(252, 100%, 67%);
 }
 .container .score__review-title {
   color: hsl(0, 0%, 100%);
-  font-size: 1.6rem;
+  font-size: 2.8rem;
 }
 .container .score__review-text {
   margin-top: 0.5em;
-  font-size: 1.2rem;
+  font-size: 1.6rem;
   color: hsl(241, 100%, 89%);
-  width: 200px;
+  width: 300px;
 }
 .container .summary {
   text-align: start;
@@ -73,6 +73,7 @@ body {
 }
 .container .summary__title {
   color: hsl(224, 30%, 27%);
+  font-size: 1.8rem;
 }
 .container .summary .same {
   display: flex;
@@ -80,7 +81,7 @@ body {
   padding: 1em;
   margin: 1em 0;
   border-radius: 5px;
-  font-size: 1.3rem;
+  font-size: 1.8rem;
   position: relative;
 }
 .container .summary .same span {
@@ -129,7 +130,48 @@ body {
   cursor: pointer;
   font-weight: 700;
   transition: color 0.3s;
+  font-size: 1.8rem;
 }
 .container .summary__button:hover {
   color: hsl(241, 100%, 89%);
+}
+
+@media (min-width: 768px) {
+  body {
+    background-color: hsl(0, 0%, 100%);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .container {
+    width: -moz-fit-content;
+    width: fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 15px 15px 15px 0px rgba(171, 171, 171, 0.207);
+    border-radius: 20px;
+    padding: 0;
+    margin: 0;
+  }
+  .container .score {
+    border-radius: 20px;
+    height: 450px;
+    width: 300px;
+    justify-content: space-around;
+    justify-content: space-evenly;
+  }
+  .container .score__numbers {
+    width: 150px;
+    height: 150px;
+  }
+  .container .score__review-text {
+    padding: 0 1em;
+  }
+  .container .summary {
+    width: 300px;
+  }
 }/*# sourceMappingURL=style.css.map */

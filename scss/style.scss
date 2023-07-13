@@ -3,6 +3,7 @@
 
 body {
 	font-family: 'Hanken Grotesk', sans-serif;
+	background-color: white;
 }
 
 .container {
@@ -13,13 +14,14 @@ body {
 	.score {
 		display: flex;
 		flex-direction: column;
+		justify-content: space-around;
 		align-items: center;
 		background: linear-gradient($Lightslateblue, $Lightroyalblue);
 		// background: linear-gradient(blue, red);
 		height: 40%;
 		border-radius: 0 0 20px 20px;
-		font-size: 1.4rem;
-		padding: 1em 4em;
+		font-size: 2.3rem;
+		// padding: 1em;
 
 		&__text {
 			color: $Lightlavender;
@@ -32,29 +34,29 @@ body {
 			background: linear-gradient($Violetblue, $Persianblue);
 			width: 100px;
 			height: 100px;
-			margin: 1em 0;
+			// margin: 1em 0;
 			// box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
 
 			&-result {
-				font-size: 4rem;
+				font-size: 4.8rem;
 				font-weight: 700;
 				color: $White;
 			}
 			&-of {
-				font-size: 1.1rem;
+				font-size: 1.6rem;
 				color: $Lightslateblue;
 			}
 		}
 		&__review {
 			&-title {
 				color: $White;
-				font-size: 1.6rem;
+				font-size: 2.8rem;
 			}
 			&-text {
 				margin-top: 0.5em;
-				font-size: 1.2rem;
+				font-size: 1.6rem;
 				color: $Lightlavender;
-				width: 200px;
+				width: 300px;
 			}
 		}
 	}
@@ -64,6 +66,7 @@ body {
 
 		&__title {
 			color: $Darkgrayblue;
+			font-size: 1.8rem;
 		}
 		.same {
 			display: flex;
@@ -71,7 +74,7 @@ body {
 			padding: 1em;
 			margin: 1em 0;
 			border-radius: 5px;
-			font-size: 1.3rem;
+			font-size: 1.8rem;
 			position: relative;
 			span {
 				color: $Lightlavender;
@@ -124,9 +127,55 @@ body {
 			cursor: pointer;
 			font-weight: 700;
 			transition: color 0.3s;
+			font-size: 1.8rem;
 		}
 		&__button:hover {
 			color: $Lightlavender;
+		}
+	}
+}
+
+@media (min-width: 768px) {
+	body {
+		background-color: $White;
+		height: 100vh;
+		// width: 100vw;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	.container {
+		width: fit-content;
+		height: fit-content;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		box-shadow: 15px 15px 15px 0px rgba(171, 171, 171, 0.207);
+		border-radius: 20px;
+		padding: 0;
+		margin: 0;
+		.score {
+			border-radius: 20px;
+			height: 450px;
+			width: 300px;
+			// display: flex;
+			justify-content: space-around;
+			justify-content: space-evenly;
+			// padding: 0 6em;
+			&__numbers { 
+				width: 150px;
+				height: 150px;
+			}
+			&__review {
+				
+				&-text {
+					padding: 0 1em;
+				}
+			}
+		}
+		.summary {
+			// height: 100%;
+			width: 300px;
 		}
 	}
 }
